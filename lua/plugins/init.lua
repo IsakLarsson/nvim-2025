@@ -7,6 +7,10 @@ return {
     opts = require "configs.conform",
   },
   {
+    "sindrets/diffview.nvim",
+    event = "VeryLazy",
+  },
+  {
     "ibhagwan/fzf-lua",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = {},
