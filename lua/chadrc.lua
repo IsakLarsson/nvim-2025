@@ -11,6 +11,7 @@ M.base46 = {
   hl_override = {
     -- Comment = { italic = true },
     -- ["@comment"] = { italic = true },
+    TelescopeSelection = { bg = "blue", fg = "one_bg" },
   },
 }
 
@@ -27,7 +28,9 @@ M.ui = {
   cmp = {
     icons = true,
     style = "atom",
+    format_colors = {
+      lsp = true,
+    },
   },
 }
-
 return M

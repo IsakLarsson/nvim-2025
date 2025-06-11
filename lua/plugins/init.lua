@@ -1,5 +1,6 @@
 return {
   -- { import = "nvchad.blink.lazyspec" },
+  { "folke/which-key.nvim", enabled = false },
   {
     "stevearc/conform.nvim",
     event = "BufWritePre", -- uncomment for format on save
@@ -76,13 +77,8 @@ return {
       "TmuxNavigatePrevious",
       "TmuxNavigatorProcessList",
     },
-    keys = {
-      { "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
-      { "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
-      { "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
-      { "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
-      { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
-    },
+
+    lazy = false,
   },
   {
     "folke/trouble.nvim",
@@ -243,6 +239,16 @@ return {
           require("substitute.exchange").line()
         end,
       },
+    },
+  },
+  {
+    "kdheepak/lazygit.nvim",
+    -- optional for floating window border decoration
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    event = {
+      "VeryLazy",
     },
   },
 }
