@@ -8,6 +8,7 @@ Assuming you already have `nvim` installed
 mv ~/.config/nvim ~/.config/nvim.backup
 git clone https://github.com/IsakLarsson/nvim-2025 ~/.config/nvim
 ```
+`:NvCheatsheet` for keybindings sheet
 
 ## Credits
 
