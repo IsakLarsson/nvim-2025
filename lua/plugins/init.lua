@@ -6,7 +6,15 @@ return {
     event = "BufWritePre", -- uncomment for format on save
     opts = require "configs.conform",
   },
-
+  {
+    "ibhagwan/fzf-lua",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    opts = {},
+    event = "BufEnter",
+    config = function()
+      require("fzf-lua").setup { "ivy" }
+    end,
+  },
   {
     "neovim/nvim-lspconfig",
     config = function()
