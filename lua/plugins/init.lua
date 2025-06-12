@@ -90,7 +90,28 @@ return {
       "TmuxNavigatorProcessList",
     },
 
-    lazy = false,
+    keys = {
+      {
+        "<C-H>",
+        "<cmd>TmuxNavigateLeft<cr>",
+        desc = "Diagnostics (Trouble)",
+      },
+      {
+        "<C-L>",
+        "<cmd>TmuxNavigateRight<cr>",
+        desc = "Buffer Diagnostics (Trouble)",
+      },
+      {
+        "<C-J>",
+        "<cmd>TmuxNavigateDown<cr>",
+        desc = "Symbols (Trouble)",
+      },
+      {
+        "<C-K>",
+        "<cmd>TmuxNavigateUp<cr>",
+        desc = "Symbols (Trouble)",
+      },
+    },
   },
   {
     "folke/trouble.nvim",
