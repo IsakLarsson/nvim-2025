@@ -12,6 +12,7 @@ M.base46 = {
     -- Comment = { italic = true },
     -- ["@comment"] = { italic = true },
     TelescopeSelection = { bg = "blue", fg = "one_bg" },
+    Visual = { bg = "base04" },
   },
 }
 
