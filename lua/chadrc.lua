@@ -27,7 +27,7 @@ M.ui = {
   },
   cmp = {
     icons = true,
-    style = "atom",
+    style = "atom_colored",
     format_colors = {
       lsp = true,
     },
