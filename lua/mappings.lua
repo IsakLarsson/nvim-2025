@@ -14,13 +14,13 @@ map("n", "<leader>q", "<cmd>:q<cr>") -- Close buffer
 map("n", "<leader>Q", "<cmd>:qa<cr>") -- Close all buffers
 
 -- UTILS --
-map("n", "U", "<C-r>") --Redo
 
 -- QOL --
 map("n", "x", '"_x"') -- Delete character to black hole buffer
 map("n", "Q", "@q") -- Quickli run q macro
 map("v", "K", ":m '<-2<CR>gv=gv")
 map("v", "J", ":m '>+1<CR>gv=gv")
+map("n", "U", "<C-r>") --Redo
 
 -- GIT --
 map("n", "<leader>gg", "<cmd>LazyGit<cr>")
