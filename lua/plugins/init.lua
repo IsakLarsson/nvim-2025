@@ -1,6 +1,16 @@
 return {
-  -- { import = "nvchad.blink.lazyspec" },
+  { import = "nvchad.blink.lazyspec" },
   { "folke/which-key.nvim", enabled = false },
+  -- {
+  --   "jinzhongjia/LspUI.nvim",
+  --   branch = "main",
+  --   config = function()
+  --     require("LspUI").setup {
+  --       -- config options go here
+  --     }
+  --   end,
+  --   lazy = false,
+  -- },
   {
     "stevearc/conform.nvim",
     event = "BufWritePre", -- uncomment for format on save
