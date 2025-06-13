@@ -15,6 +15,8 @@ map("n", "<leader>Q", "<cmd>:qa<cr>") -- Close all buffers
 
 -- UTILS --
 map("n", "<leader>gb", "<cmd>Gitsigns blame<cr>")
+map("n", "<leader>rr", ":%s/<C-r><C-w>/") -- Start replace on current word
+map("n", "<BS>", "<C-o>")
 
 -- QOL --
 map("n", "x", '"_x"') -- Delete character to black hole buffer
@@ -41,10 +43,8 @@ map("n", "<leader>fg", "<cmd>:FzfLua lsp_document_symbols<cr>")
 map("n", "<leader>ff", "<cmd>:FzfLua files<cr>")
 map("n", "gf", "<cmd>Telescope lsp_references theme=ivy initial_mode=normal<cr>")
 
--- DIAGNOSTICS --
 map("n", "<leader>fd", function()
   vim.diagnostic.open_float { border = "rounded" }
 end)
-map("n", "<leader>da", "<cmd>Trouble diagnostics")
-
--- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+map("n", "<leader>da", "<cmd>Trouble diagnostics<cr>")
+-- DIAGNOSTICS --
