@@ -171,6 +171,7 @@ return {
         "css",
         "elm",
       },
+      auto_install = true,
     },
   },
 

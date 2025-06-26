@@ -37,6 +37,7 @@ map("n", "<C-\\>", "<cmd>TmuxNavigatePrevious<cr>")
 
 -- LSP --
 map("n", "<leader>rs", "<cmd>:LspRestart<CR>")
+map("n", "<leader>ca", "<cmd>:FzfLua lsp_code_actions<CR>")
 
 -- Finding stuff --
 map("n", "<leader>fg", "<cmd>:FzfLua lsp_document_symbols<cr>")
