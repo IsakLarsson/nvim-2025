@@ -17,6 +17,8 @@ map("n", "<leader>Q", "<cmd>:qa<cr>") -- Close all buffers
 map("n", "<leader>gb", "<cmd>Gitsigns blame<cr>")
 map("n", "<leader>rr", ":%s/<C-r><C-w>/") -- Start replace on current word
 map("n", "<BS>", "<C-o>")
+map("n", "]c", ":Gitsigns next_hunk<cr>")
+map("n", "[c", ":Gitsigns prev_hunk<cr>")
 
 -- QOL --
 map("n", "x", '"_x"') -- Delete character to black hole buffer
