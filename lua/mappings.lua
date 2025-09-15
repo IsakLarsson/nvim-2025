@@ -49,5 +49,5 @@ map("n", "gf", "<cmd>Telescope lsp_references theme=ivy initial_mode=normal<cr>"
 map("n", "<leader>fd", function()
   vim.diagnostic.open_float { border = "rounded" }
 end)
-map("n", "<leader>da", "<cmd>Trouble diagnostics<cr>")
+map("n", "<leader>da", "<cmd>SearchErrorDiagnostics<cr>")
 -- DIAGNOSTICS --
