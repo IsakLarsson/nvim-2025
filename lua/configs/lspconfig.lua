@@ -1,23 +1,17 @@
 require("nvchad.configs.lspconfig").defaults()
 
-local lspconfig = require "lspconfig"
+local lspconfig = vim.lsp.config
 local on_attach = require("nvchad.configs.lspconfig").on_attach
 local capabilities = require("nvchad.configs.lspconfig").capabilities
 
 local servers = { "html", "cssls", "elmls", "biome", "lua_ls", "tailwindcss", "gleam", "ts_ls" }
-vim.lsp.enable(servers)
 
-lspconfig.tailwindcss.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
+lspconfig.tailwindcss = {
+  -- on_attach = on_attach,
+  -- capabilities = capabilities,
   filetypes = { "html", "elm" },
-  init_options = {
-    userLanguages = {
-      elm = "html",
-      html = "html",
-    },
-  },
-  root_dir = require("lspconfig.util").root_pattern ".git",
+  root_dir = nil,
+  root_markers = { ".git" },
   settings = {
     tailwindCSS = {
       includeLanguages = {
@@ -51,3 +45,4 @@ lspconfig.tailwindcss.setup {
   },
 }
 -- read :h vim.lsp.config for changing options of lsp servers
+vim.lsp.enable(servers)
