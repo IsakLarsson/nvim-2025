@@ -2,10 +2,7 @@ require "nvchad.mappings"
 
 -- add yours here
 
-local nomap = vim.keymap.del
 local map = vim.keymap.set
-
-nomap("n", "<tab>")
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
 

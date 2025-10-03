@@ -126,43 +126,6 @@ return {
     },
   },
   {
-    "folke/trouble.nvim",
-    opts = {}, -- for default options, refer to the configuration section for custom setup.
-    cmd = "Trouble",
-    keys = {
-      {
-        "<leader>xx",
-        "<cmd>Trouble diagnostics toggle<cr>",
-        desc = "Diagnostics (Trouble)",
-      },
-      {
-        "<leader>xX",
-        "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
-        desc = "Buffer Diagnostics (Trouble)",
-      },
-      {
-        "<leader>cs",
-        "<cmd>Trouble symbols toggle focus=false<cr>",
-        desc = "Symbols (Trouble)",
-      },
-      {
-        "<leader>cl",
-        "<cmd>Trouble lsp toggle focus=false win.position=right<cr>",
-        desc = "LSP Definitions / references / ... (Trouble)",
-      },
-      {
-        "<leader>xL",
-        "<cmd>Trouble loclist toggle<cr>",
-        desc = "Location List (Trouble)",
-      },
-      {
-        "<leader>xQ",
-        "<cmd>Trouble qflist toggle<cr>",
-        desc = "Quickfix List (Trouble)",
-      },
-    },
-  },
-  {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
@@ -190,13 +153,38 @@ return {
     opts = {
       modes = {
         search = { enabled = false },
-        char = { multi_line = false, highlight = { backdrop = false } },
+        char = { multi_line = false, highlight = { backdrop = false }, jump_labels = true },
       },
       highlight = {
         backdrop = true,
       },
     },
     keys = {
+      {
+        "<leader>fd",
+        mode = { "n", "x", "o" },
+        function()
+          require("flash").jump {
+            matcher = function(win)
+              ---@param diag Diagnostic
+              return vim.tbl_map(function(diag)
+                return {
+                  pos = { diag.lnum + 1, diag.col },
+                  end_pos = { diag.end_lnum + 1, diag.end_col - 1 },
+                }
+              end, vim.diagnostic.get(vim.api.nvim_win_get_buf(win)))
+            end,
+            action = function(match, state)
+              vim.api.nvim_win_call(match.win, function()
+                vim.api.nvim_win_set_cursor(match.win, match.pos)
+                vim.diagnostic.open_float()
+              end)
+              state:restore()
+            end,
+          }
+        end,
+        desc = "Flash",
+      },
       {
         "<leader>s",
         mode = { "n", "x", "o" },
