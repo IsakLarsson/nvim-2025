@@ -41,10 +41,8 @@ map("n", "<leader>ca", "<cmd>:FzfLua lsp_code_actions<CR>")
 -- Finding stuff --
 map("n", "<leader>fg", "<cmd>:FzfLua lsp_document_symbols<cr>")
 map("n", "<leader>ff", "<cmd>:FzfLua files<cr>")
-map("n", "gf", "<cmd>Telescope lsp_references theme=ivy initial_mode=normal<cr>")
+map("n", "<leader>fw", "<cmd>:FzfLua live_grep_native<cr>")
 
 map("n", "<leader>fd", function()
   vim.diagnostic.open_float { border = "rounded" }
 end)
-map("n", "<leader>da", "<cmd>SearchErrorDiagnostics<cr>")
--- DIAGNOSTICS --

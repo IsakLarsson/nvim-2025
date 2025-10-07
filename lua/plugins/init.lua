@@ -1,6 +1,7 @@
 return {
   { import = "nvchad.blink.lazyspec" },
   { "folke/which-key.nvim", enabled = false },
+  { "nvim-telesope/telescope.nvim", enabled = false },
   {
     "stevearc/conform.nvim",
     event = "BufWritePre", -- uncomment for format on save
@@ -13,10 +14,12 @@ return {
   {
     "ibhagwan/fzf-lua",
     dependencies = { "nvim-tree/nvim-web-devicons" },
-    opts = {},
     event = "BufEnter",
-    config = function()
-      require("fzf-lua").setup { "ivy" }
+    opts = function()
+      return require("configs.fzf").opts
+    end,
+    keys = function()
+      return require("configs.fzf").keys
     end,
   },
   {

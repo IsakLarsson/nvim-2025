@@ -1,3 +1,8 @@
+local ok, fzf = pcall(require, "fzf-lua")
+if not ok then
+  return
+end
+
 M = {}
 
 M.opts = {
@@ -69,6 +74,16 @@ M.opts = {
     symbols = {
       locate = true,
     },
+  },
+}
+
+M.keys = {
+  {
+    "<leader>da",
+    function()
+      fzf.lsp_workspace_diagnostics()
+    end,
+    desc = "Fzf LSP diagnostics",
   },
 }
 
