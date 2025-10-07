@@ -85,6 +85,13 @@ M.keys = {
     end,
     desc = "Fzf LSP diagnostics",
   },
+  {
+    "gf",
+    function()
+      fzf.lsp_references()
+    end,
+    desc = "Fzf LSP references",
+  },
 }
 
 return M
