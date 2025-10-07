@@ -15,9 +15,7 @@ M.opts = {
     height = 0.4,
     width = 0.8,
     row = 0.5,
-    -- preview = { hidden = "hidden" },
     border = "rounded",
-    treesitter = { enabled = true },
   },
   fzf_opts = {
     ["--no-info"] = "",
@@ -66,8 +64,7 @@ M.opts = {
       title_pos = "center",
       height = 0.6,
       preview = {
-        horizontal = "down:40%",
-        wrap = "wrap",
+        wrap = true,
       },
     },
     cwd_only = true,
