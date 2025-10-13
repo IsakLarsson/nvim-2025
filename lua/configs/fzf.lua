@@ -16,6 +16,7 @@ M.opts = {
     width = 0.8,
     row = 0.5,
     border = "rounded",
+    treesitter = { enabled = true },
   },
   fzf_opts = {
     ["--no-info"] = "",
