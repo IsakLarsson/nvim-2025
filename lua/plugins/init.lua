@@ -156,7 +156,7 @@ return {
     opts = {
       modes = {
         search = { enabled = false },
-        char = { multi_line = false, highlight = { backdrop = false }, jump_labels = true },
+        char = { multi_line = false, highlight = { backdrop = false } },
       },
       highlight = {
         backdrop = true,
