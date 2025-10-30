@@ -4,7 +4,20 @@ local lspconfig = vim.lsp.config
 local on_attach = require("nvchad.configs.lspconfig").on_attach
 local capabilities = require("nvchad.configs.lspconfig").capabilities
 
-local servers = { "html", "cssls", "elmls", "biome", "lua_ls", "tailwindcss", "gleam", "ts_ls", "gopls", "gofumpt" }
+local servers = {
+  "html",
+  "cssls",
+  "elmls",
+  "biome",
+  "lua_ls",
+  "tailwindcss",
+  "gleam",
+  "ts_ls",
+  "gopls",
+  "gofumpt",
+  "pylsp",
+  "omnisharp",
+}
 vim.lsp.enable(servers)
 
 lspconfig.tailwindcss = {
