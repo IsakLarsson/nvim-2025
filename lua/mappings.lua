@@ -23,6 +23,7 @@ map("n", "Q", "@q") -- Quickli run q macro
 map("v", "K", ":m '<-2<CR>gv=gv")
 map("v", "J", ":m '>+1<CR>gv=gv")
 map("n", "U", "<C-r>") --Redo
+map("n", "<leader>v", "<C-w>v")
 
 -- GIT --
 map("n", "<leader>gg", "<cmd>LazyGit<cr>")
