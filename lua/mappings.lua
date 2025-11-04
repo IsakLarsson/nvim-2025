@@ -26,6 +26,8 @@ map("n", "U", "<C-r>") --Redo
 
 -- GIT --
 map("n", "<leader>gg", "<cmd>LazyGit<cr>")
+map("n", "<leader>do", "<cmd>DiffviewOpen<cr>")
+map("n", "<leader>do", "<cmd>DiffviewClose<cr>")
 
 -- TMUX --
 map("n", "<C-H>", "<cmd>TmuxNavigateLeft<cr>")
