@@ -28,7 +28,7 @@ map("n", "<leader>v", "<C-w>v")
 -- GIT --
 map("n", "<leader>gg", "<cmd>LazyGit<cr>")
 map("n", "<leader>do", "<cmd>DiffviewOpen<cr>")
-map("n", "<leader>do", "<cmd>DiffviewClose<cr>")
+map("n", "<leader>dc", "<cmd>DiffviewClose<cr>")
 
 -- TMUX --
 map("n", "<C-H>", "<cmd>TmuxNavigateLeft<cr>")
