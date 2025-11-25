@@ -90,6 +90,14 @@ M.keys = {
     end,
     desc = "Fzf LSP references",
   },
+  {
+
+    "<leader>p",
+    function()
+      fzf.files()
+    end,
+    desc = "Fzf LSP files",
+  },
 }
 
 return M
