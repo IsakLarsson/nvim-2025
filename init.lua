@@ -47,6 +47,8 @@ vim.lsp.util.open_floating_preview = function(contents, syntax, opts, ...)
   return orig_util(contents, syntax, opts, ...)
 end
 
+--GODOT Server setup
+
 local sock = "./godothost"
 local projectfile = vim.fn.getcwd() .. "/project.godot"
 
