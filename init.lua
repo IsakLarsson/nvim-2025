@@ -47,6 +47,12 @@ vim.lsp.util.open_floating_preview = function(contents, syntax, opts, ...)
   return orig_util(contents, syntax, opts, ...)
 end
 
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    require("fzf-lua").files()
+  end,
+})
+
 --GODOT Server setup
 
 local sock = "./godothost"
