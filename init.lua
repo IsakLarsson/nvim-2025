@@ -49,7 +49,9 @@ end
 
 vim.api.nvim_create_autocmd("VimEnter", {
   callback = function()
-    require("fzf-lua").files()
+    if vim.fn.argc() == 0 then
+      require("fzf-lua").files()
+    end
   end,
 })
 
