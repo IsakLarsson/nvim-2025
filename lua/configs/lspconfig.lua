@@ -1,8 +1,6 @@
 require("nvchad.configs.lspconfig").defaults()
 
 local lspconfig = vim.lsp.config
-local on_attach = require("nvchad.configs.lspconfig").on_attach
-local capabilities = require("nvchad.configs.lspconfig").capabilities
 
 local servers = {
   "html",
@@ -18,7 +16,6 @@ local servers = {
   "pylsp",
   "omnisharp",
 }
-vim.lsp.enable(servers)
 
 lspconfig.tailwindcss = {
   -- on_attach = on_attach,
