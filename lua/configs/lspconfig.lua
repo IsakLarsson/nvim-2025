@@ -17,12 +17,28 @@ local servers = {
   "omnisharp",
 }
 
+-- vim.lsp.enable(servers)
+
 lspconfig.tailwindcss = {
-  -- on_attach = on_attach,
-  -- capabilities = capabilities,
-  filetypes = { "html", "elm" },
-  root_dir = nil,
-  root_markers = { ".git" },
+  cmd = { "tailwindcss-language-server", "--stdio" },
+  filetypes = {
+    "elm",
+    "html",
+    "php",
+    "css",
+    "scss",
+    "javascript",
+    "typescript",
+  },
+  root_markers = {
+    ".git",
+  },
+  init_options = {
+    userLanguages = {
+      elm = "html",
+      html = "html",
+    },
+  },
   settings = {
     tailwindCSS = {
       includeLanguages = {
@@ -31,6 +47,7 @@ lspconfig.tailwindcss = {
       },
       classAttributes = { "class", "className", "classList", "ngClass" },
       experimental = {
+        configFile = "../shared/css/style.css",
         classRegex = {
           '\\bclass[\\s(<|]+"([^"]*)"',
           '\\bclass[\\s(]+"[^"]*"[\\s+]+"([^"]*)"',
